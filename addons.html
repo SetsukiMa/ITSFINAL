@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoro Ark</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src = "script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            font-family: var(--bs-body-font-family) !important;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 420px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            text-align: left;
+        }
+
+        /* Overlay background */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        /* Form styling */
+        .modal h2 {
+            text-align: center;
+            color: #333;
+            font-size: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        input[type="text"], input[type="email"], input[type="date"] {
+            width: calc(100% - 10px);
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .close-btn {
+            background: #e74c3c;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            background: #2ecc71;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Order Now Button */
+        .orderNowBtn {
+            background: #3498db;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .orderNowBtn:hover {
+            background: #2980b9;
+        }
+        body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("ApplyNowImage/red.jpg"); /* Set the background image */
+      background-size: cover; /* Cover the entire viewport */
+      background-repeat: no-repeat; /* Prevent image repetition */
+    } 
+
+    .header-top {
+    background-color: #6B6B6B; /* Updated to match Zoroark logo color */
+    color: black;
+    padding: 0px 0px;
+ 
+}
+
+
+.header-top a {
+    color: black;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+
+.header-bottom {
+    background-color: #22252A; /* Updated to match sub-navbar color */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.header-bottom a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    flex:1
+}
+
+    .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            border: 1px solid #3D3F4B; /* Darker Border */
+            padding: 20px;
+            display: flex;
+            background-color: #3D3F4B; /* Darker Container Background */
+            border-radius: 10px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #555; /* Slightly Lighter Border */
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #9D5351; /* Accent Color */
+        }
+
+        .header-right input {
+            padding: 8px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            width: 180px;
+            background-color: #4A4D59; /* Input Background */
+            color: #E0E0E0;
+        }
+
+        .header-right button {
+            padding: 8px 12px;
+            margin-left: 5px;
+            border: none;
+            cursor: pointer;
+            background-color: #992025; /* Primary Button Color */
+            color: white;
+            border-radius: 5px;
+        }
+
+        .header-right button:hover {
+            background-color: #862E2D; /* Primary Button Hover */
+        }
+
+        .sidebar {
+            width: 200px;
+            padding-right: 20px;
+            border-right: 1px solid #555;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0 0;
+        }
+
+        .sidebar li {
+            padding: 10px;
+            border-bottom: 1px solid #555;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .sidebar li:hover {
+            background: #4A4D59; /* Sidebar Hover */
+        }
+
+        .content {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product {
+            width: calc(50% - 20px);
+            border: 1px solid #555;
+            padding: 15px;
+            text-align: center;
+            background-color: #4A4D59; /* Product Background */
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .product:hover {
+            transform: scale(1.03);
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .product button {
+            background-color: #992025;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .product button:hover {
+            background-color: #862E2D;
+        }
+
+        .footer {
+    background-color: #333; /* Adjust as needed */
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.footer a {
+    color: #9D5351;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer hr {
+    border: 0;
+    height: 1px;
+    background: #9D5351;
+    margin: 15px 0;
+}
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #3D3F4B;
+            padding: 10px 0;
+            text-align: center;
+            border-top: 2px solid #555;
+        }
+
+        .bottom-nav img {
+            width: 30px;
+            margin: 0 20px;
+        }
+
+        .subcategory {
+            display: none;
+        }
+
+        .subcategory.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                padding-right: 0;
+            }
+
+            .content {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            .product {
+                width: 100%;
+            }
+            
+        }
+
+
+
+        .footer {
+			background-color: #222; /* Match nav color */
+			color: white;
+			padding: 20px;
+			font-size: 14px;
+			border: 2px solid black; /* Matches the boxed style */
+		}
+
+		.footer-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			max-width: 900px; /* Adjust width as needed */
+			margin: auto;
+			padding: 20px 0;
+		}
+
+		.footer-left {
+			width: 40%;
+			text-align: center;
+			font-weight: bold;
+			font-size: 18px;
+		}
+
+		.footer-right {
+			width: 55%;
+			font-size: 14px;
+		}
+
+		.footer-right p {
+			margin: 5px 0;
+		}
+
+		.footer-right i {
+			margin-right: 8px;
+		}
+
+		.footer-divider {
+			width: 2px;
+			background-color: white;
+			height: 80px;
+			margin: 0 20px;
+		}
+        
+        
+
+   
+</style>
+<body>
+    <!-- Main Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="LOGOIMAGE/logo.png" alt="Company Logo">
+            </a>
+        </div>
+    
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="index.html#internet-plans" class="nav-item">Plans</a>
+    
+            <!-- Dropdown: Careers -->
+            <div class="dropdown">
+                <a href="#" class="nav-item">Careers</a>
+                <div class="dropdown-content">
+                    <p>Find exciting job opportunities at ZoroArk.</p>
+                    <a href="careers.html" class="btn btn-primary">View Careers</a>
+                </div>
+            </div>
+    
+            <!-- Dropdown: Apply Now -->
+            <div class="dropdown">
+                <a href="#" class="nav-item">Apply Now</a>
+                <div class="dropdown-content">
+                    <p>Start your application process now.</p>
+                    <a href="applynow.html" class="btn btn-primary">Apply Here</a>
+                </div>
+            </div>
+    
+            <!-- Dropdown: Contact Us -->
+            <div class="dropdown">
+                <a href="#" class="nav-item">Contact Us</a>
+                <div class="dropdown-content">
+                    <p>Need help? Get in touch with us.</p>
+                    <a href="contactus.html" class="btn btn-primary">Contact Support</a>
+                </div>
+            </div>
+    
+            <!-- Dropdown: Add-ons -->
+            <div class="dropdown">
+                <a href="#" class="nav-item">Add-ons</a>
+                <div class="dropdown-content">
+                    <p>Enhance your internet experience with our add-ons.</p>
+                    <a href="addons.html" class="btn btn-primary">View Add-ons</a>
+                </div>
+            </div>
+        </div>
+        </nav>
+
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="header-left">
+            
+            </div>
+
+            </header>
+            <nav>
+                <strong>Categories</strong>
+                <ul>
+                    <li onclick="showCategory('connectivity')">📡 Connectivity & Coverage</li>
+                    <li onclick="showCategory('gaming')">🎮 Gaming Optimization</li>
+                    <li onclick="showCategory('business')">🌐 Business & Remote Work</li>
+                    <li onclick="showCategory('security')">👨‍👩‍👧 Parental & Security Features</li>
+                    <li onclick="showCategory('entertainment')">🎥 Entertainment & Streaming</li>
+                </ul>
+            </nav>
+        </div>
+
+       
+        <section class="content">
+            <header class="header">
+                <div class="header-right">
+      
+                
+                </div>
+            </header>
+        
+
+
+            <div id="connectivity" class="subcategory active">
+                <div class="product-grid">
+                    <div class="product" data-name="WiFi Mesh System">
+                        <img src="AddonsImage/wifi-mesh-image.jpg" alt="WiFi Mesh System">
+                        <strong>WiFi Mesh System – ₱799/month</strong>
+                        <p> Eliminate dead zones & enjoy whole-home coverage</p>
+                        <button onclick="window.location.href='applynow.html'">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gaming" class="subcategory">
+                <div class="product-grid">
+                    <div class="product" data-name="Game Optimizer Mode">
+                        <img src="AddonsImage/game-optimizer-image.jpg" alt="Game Optimizer Mode">
+                        <strong>Game Optimizer Mode – ₱499/month</strong>
+                        <p> Lower latency for a smoother, lag-free gaming experience</p>
+                        <button onclick="window.location.href='applynow.html'">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="business" class="subcategory">
+                <div class="product-grid">
+                    <div class="product" data-name="Static IP Address">
+                        <img src="AddonsImage/static-ip-image.jpg" alt="Static IP Address">
+                        <strong>Static IP Address – ₱399/month</strong>
+                        <p> Essential for remote work, business servers, and secure access</p>
+                        <button onclick="window.location.href='applynow.html'">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <div id="security" class="subcategory">
+                <div class="product-grid">
+                    <div class="product" data-name="Parental Controls & Safe Browsing">
+                        <img src="AddonsImage/parental-controls-image.jpg" alt="Parental Controls">
+                        <strong>Parental Controls & Safe Browsing – ₱299/month</strong>
+                        <p> Monitor and control internet usage for a safer online experience</p>
+                        <button onclick="window.location.href='applynow.html'">Order Now</button>
+                    </div>
+                    <div class="product" data-name="Zoroark Security+">
+                        <img src="AddonsImage/security-plus-image.jpg" alt="Zoroark Security+">
+                        <strong>Zoroark Security+ (VPN & Firewall Protection) – ₱599/month</strong>
+                        <p> AI-powered cybersecurity with encrypted browsing & malware protection</p>
+                        <button onclick="window.location.href='applynow.html'">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <div id="entertainment" class="subcategory">
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="AddonsImage/entertainment-bundle-image.jpg" alt="Entertainment Bundle">
+                        <strong>Entertainment Bundle (Netflix & Disney+ Add-On) – ₱599/month</strong>
+                        <p> Get unlimited access to your favorite streaming platforms</p>
+                        <button onclick="window.location.href='applynow.html'">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <link href="footer.css" rel="stylesheet">
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left Side -->
+            <div class="footer-left">
+                <p>Experience Power Unmatched</p>
+            </div>
+    
+            <div class="footer-divider"></div>
+    
+            <!-- Right Side -->
+            <div class="footer-right">
+                <p>📞 <strong>Call Us Today:</strong> (02) 921-3387</p>
+                <p>🖥️ <strong>Email:</strong> support@zoroarkfiber.com</p>
+                <p>📍 <strong>Visit Our Offices:</strong> 1191 Pablo Ocampo Sr. Ext, Makati, Metro Manila</p>
+            </div>
+        </div>     
+
+
+    </footer>
+
+    <link href="developer.css" rel="stylesheet">
+    <footer class="developer">
+        <p>Developed by: JT Cantalejo</p>
+    </footer> 
+
+    
+    
+
+    
+
+    <script>
+        function showCategory(category) {
+            document.querySelectorAll('.subcategory').forEach(sub => sub.classList.remove('active'));
+            document.getElementById(category).classList.add('active');
+        }
+    
+        function searchProducts() {
+            let searchQuery = document.getElementById("searchInput").value.toLowerCase();
+            let products = document.querySelectorAll(".product");
+            let foundCategory = null; // Store the found category
+    
+            products.forEach(product => {
+                let name = product.getAttribute("data-name").toLowerCase();
+                let categoryDiv = product.closest(".subcategory");
+    
+                if (name.includes(searchQuery)) {
+                    product.style.display = "block";
+                    foundCategory = categoryDiv.id; // Update foundCategory
+                } else {
+                    product.style.display = "none";
+                }
+            });
+    
+            // Show only the relevant category
+            document.querySelectorAll('.subcategory').forEach(sub => {
+                if (sub.id === foundCategory) {
+                    sub.classList.add('active');
+                } else {
+                    sub.classList.remove('active');
+                }
+            });
+    
+            
+            // If no results, keep all categories hidden
+            if (!foundCategory) {
+                document.querySelectorAll('.subcategory').forEach(sub => sub.classList.remove('active'));
+            }
+            
+        }
+      
+    function openModal() {
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById("orderForm").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("overlay").style.display = "none";
+        document.getElementById("orderForm").style.display = "none";
+    }
+
+    function submitOrder() {
+        alert("Your order has been submitted!");
+        closeModal();
+    }
+
+    // Attach event listeners to each "Order Now" button inside the products
+    document.addEventListener("DOMContentLoaded", function() {
+        let orderButtons = document.querySelectorAll(".product button");
+        orderButtons.forEach(button => {
+            button.addEventListener("click", openModal);
+        });
+    });
+
+    </script>
+
+</body>
+</html>

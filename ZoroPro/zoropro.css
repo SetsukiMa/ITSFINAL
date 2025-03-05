@@ -1,0 +1,182 @@
+		/* ============================================
+		   GLOBAL STYLES - RESET & GENERAL SETTINGS
+		=============================================== */
+		
+		*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+
+        }
+		
+		/*navbar*/
+		.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 15px 30px;
+    position: relative;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #f4a261;
+}
+
+/* Dropdown Styling */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 15px;
+    width: 260px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Button in Dropdown */
+.dropdown-content .btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #f4a261;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.dropdown-content .btn:hover {
+    background: #e76f51;
+}
+
+/* Fix Dropdown Overlap */
+.nav-links .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .dropdown-content {
+        left: 0;
+        transform: none;
+        width: 100%;
+    }
+}
+
+		
+		/* ============================================
+			   PARALLAX BACKGROUND
+			=============================================== */
+		.parallax {
+			background: url('parallax.jpg') center/cover no-repeat fixed;
+			height: auto;
+			padding: 50px 0;
+			position: relative;
+		}	
+
+		/* ============================================
+			   TOP TEXT
+		=============================================== */
+		/*for top text*/
+		.issue{
+			color: white;
+			font-size: 2rem;
+			font-weight: 800;
+			line-height: 1.4;
+			padding: 2rem;
+		}
+		
+		.tableContainer{
+					background:  url('red.jpg'); /* Keeps text readable */
+					padding: 40px 20px; /* Increases space inside the text box */
+					border-radius: 10px;
+					/*flex box*/
+					display: flex;
+					justify-content: center; /* Horizontally center */
+					align-items: center; 
+					flex-direction: column; 
+					
+				}
+			.tableContainer h1{
+				  font-size: 2.5rem;
+					font-weight: 700;
+					text-transform: uppercase; /* Make all letters uppercase */
+					letter-spacing: 2px; /* Space out letters */
+					text-align: center;
+					color: white;
+					border-bottom: 3px solid white; /* Add an underline */
+					display: inline-block;
+					padding-bottom: 5px;
+					margin-bottom: 20px;
+				}
+			
+			#tableInfo th, #tableInfo td {
+				padding: 15px; /* Increase padding inside each cell */
+			}
+			
+			/* HERO SECTION */
+			.ZoroProhero {
+				text-align: center;
+				position: relative;
+				width: 100%;
+			}
+
+			/* Make the hero image fully responsive */
+			.hero-image {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+
+			/* Optional: Add padding or adjust background */
+			.imahe {
+				background-color: #992C25;  
+				padding: 20px 0; /* Adds space around the hero section */
+			}
+		
+
+		

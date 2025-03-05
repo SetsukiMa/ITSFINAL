@@ -1,0 +1,566 @@
+ 
+ /*prevents zoom in html*/
+ html, body {
+    touch-action: manipulation; /* Disables double-tap zoom */
+    overflow-x: hidden;
+    font-family: var(--bs-body-font-family); /* Prevents horizontal scrolling */
+}
+
+/*navbarrrrrrr*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 15px 30px;
+    position: relative;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #f4a261;
+}
+
+/* Dropdown Styling */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 15px;
+    width: 260px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Button in Dropdown */
+.dropdown-content .btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #f4a261;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.dropdown-content .btn:hover {
+    background: #e76f51;
+}
+
+/* Fix Dropdown Overlap */
+.nav-links .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .dropdown-content {
+        left: 0;
+        transform: none;
+        width: 100%;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: url('kira.jpg') center/cover fixed;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.carousel-inner img {
+    width: 100%;      /* Ensures images fill the container */
+    height: auto;     /* Keeps aspect ratio */
+    object-fit: cover; /* Ensures images cover the space properly */
+    max-height: 500px; /* Adjust this based on your design */
+}
+
+
+/*SECTION2:  Parallax Section */
+/*TEXT*/
+/* Dark Overlay */
+.parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+/* Text & Content Wrapper */
+.content-container {
+    position: relative; /* Brings text above overlay */
+    z-index: 2; /* Ensures it's above the background */
+    color: white;
+    text-align: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* Text Styling */
+.content-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Adds contrast */
+}
+
+.content-container p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+/* Parallax Background */
+.parallax {
+    background-image: url('HomepageImage/red.jpg.png'); /* Replace with your image */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative ;
+    min-height: 500px; /* Prevents collapse */
+}
+
+/* Flex Container for Text and Media */
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    color: white;
+}
+
+/* Left Side: Text */
+.content {
+    max-width: 50%;
+}
+
+/* Right Side: Media Box */
+.media-box {
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent square */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Image/Video inside Media Box */
+.media-box img, .media-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Centering Overlay Text */
+.carousel-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    z-index:10;
+}
+
+/* Adjusting Headings & Paragraph */
+.carousel-overlay h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-overlay h4 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin-top: 10px;
+}
+
+.carousel-overlay p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/*SECTION 4 CSS*/
+.why-choose {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #862e2d;
+}
+
+.why-choose .card {
+    background-color: #303030; /* Change this to any color you want */
+    padding: 20px;
+    border-radius: 10px; /* Optional: for rounded corners */
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+}
+why-choose .card {
+    background-color: #ffcc00; /* Box color */
+    color: #fff; /* Change font color (Black in this case) */
+}
+
+/* If you want different colors for headings and paragraphs */
+.why-choose .card h3 {
+    color: #dbd9d6; /* White for titles */
+}
+
+.why-choose .card p {
+    color: #aba7a5; /* Dark gray for paragraph text */
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Carousel Content Layout */
+.carousel-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Info Box (Square Shape) */
+.info-box {
+    width: 500px;
+    height: 500px; /* Make it a square */
+    transform: translateY(-50%);
+    background: #3d3f4b;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0; /* No rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Box Image */
+.info-box img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Button Style */
+.carousel-control-prev, .carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.6);
+    opacity: 1;
+}
+
+.carousel-control-prev {
+    left: 60px;  
+    
+}
+
+.carousel-control-next {
+    right: 60px; 
+}
+
+
+.custom-arrow {
+    font-size: 2rem;  /* Adjust arrow size */
+    color: white;  /* Change arrow color */
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0); /* Optional: Add background */
+}
+
+/* SECTION : Internet Plan Hover Effect */
+.plan-box {
+    transition: transform 0.3s ease;
+}
+.plan-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+/*carosel*/
+.carousel-inner img {
+    width: 100%;      
+    height: auto;     
+    object-fit: cover; 
+    max-height: 500px; 
+}
+
+/*SECTION 6 INTERNET PLANS*/
+/* Ensure section doesn't overlap with next section */
+.internet-plans-section {
+    margin-bottom: 80px; /* Adds space below */
+    background-color: #303030; 
+    padding: 50px 0;
+    color: #dbd9d6;
+}
+
+/* Plan box styles */
+.internet-plan-box {
+    position: relative;
+    background: #303030;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+/* Hover effect */
+.internet-plan-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Hover box styling */
+.internet-hover-box {
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+    text-align: left;
+    color: #303030; /* Change this to a lighter shade */
+}
+
+/* Show hover box on hover */
+.internet-plan-box:hover .internet-hover-box {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Button styling */
+.internet-btn {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .internet-hover-box {
+        width: 90%;
+    }
+}
+
+/* SECTION 7: ZoroArkBusoness */
+.business-solutions {
+    text-align: center;
+    padding: 60px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('LOGOIMAGE/zorooark.gif') no-repeat center center/cover;
+    color: white; /* Ensures text is readable */
+    position: relative; /* Helps control layout */
+    overflow: hidden; /* Prevents unwanted stretching */
+}
+
+
+.solution-container {
+    display: flex;
+    flex-direction: column; /* Stack items in a 4x1 layout */
+    align-items: center; /* Center horizontally */
+    gap: 15px; /* Reduce space between boxes */
+}
+
+
+
+.solution-box {
+    width: 60%; /* Keeps a nice width */
+    max-width: 500px; /* Adjusted for better fit */
+    height: 120px; /* Reduced height */
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Centers text vertically */
+    justify-content: center; /* Centers text horizontally */
+    font-size: 1.5rem; /* Makes text bigger */
+    font-weight: bold; /* Makes text more visible */
+    color: #303030;
+}
+
+/* Hover Effect */
+.solution-box:hover .hover-box {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hover-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-size: 1.2rem; /* Slightly bigger text for hover box */
+}
+
+.solution-box:hover .hover-box {
+    opacity: 1;
+}
+
+/* SECTION 7: Centered Title + Text */
+.centered-text-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #303030;
+    color: white;
+}
+
+.title-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description-text {
+    font-size: 1.2rem;
+    color: #ddd;
+    max-width: 600px;
+    margin: 0 auto;
+}
+/*SECTION FOOTER*/
+.footer {
+    background-color: #222; /* Match nav color */
+    color: white;
+    padding: 20px;
+    font-size: 14px;
+    border: 2px solid black; /* Matches the boxed style */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px; /* Adjust width as needed */
+    margin: auto;
+    padding: 20px 0;
+}
+
+.footer-left {
+    width: 40%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer-right {
+    width: 55%;
+    font-size: 14px;
+}
+
+.footer-right p {
+    margin: 5px 0;
+}
+
+.footer-right i {
+    margin-right: 8px;
+}
+
+.footer-divider {
+    width: 2px;
+    background-color: white;
+    height: 80px;
+    margin: 0 20px;
+}

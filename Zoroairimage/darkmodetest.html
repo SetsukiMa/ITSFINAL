@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoroark Apply Now</title>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+	 	<link href="cssForms.css" rel="stylesheet">
+    
+</head>
+<body>
+<nav>
+    <!-- Main Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="homepage.html">
+                <img src="logored.jpg" alt="Company Logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="aboutus.html">About Us</a>
+            <a href="applynow.html">Apply Now</a>
+            <a href="contactus.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Sub Navigation Bar -->
+    <div class="sub-navbar">
+        <a href="plans.html">Plans or Promos</a>
+        <a href="careers.html">Careers</a>
+        <a href="addons.html">Add-ons</a>
+        <a href="faq.html">FAQs</a>
+    </div>
+</nav>
+    <!-- Hero Section -->
+    <div class="hero">
+		<div class="hero-text">
+        <h1>Apply Now!</h1>
+        <p>Fill out the form below to select your plan and get started with Zoroark’s ultra-fast, reliable internet!</p>
+		</div>
+	</div>
+
+
+<!-- background -->
+<div class="parallax-container">
+    <!-- Form Section -->
+    <div class="form-container">
+        <h2>Customer Information</h2>
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact</label>
+                    <input type="tel" id="contact" name="contact" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="street">House No./Street</label>
+                <input type="text" id="street" name="street" required>
+            </div>
+
+            <div class="form-group">
+                <label for="city">Barangay/City/Province</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+
+            <div class="form-group">
+                <label for="zipCode">Zip Code</label>
+                <input type="number" id="zipCode" name="zipCode" max="9999" required>
+            </div>
+
+            <!-- Radio Button Selection -->
+           <div class="form-group">
+    <label>Payment Plan:</label>
+    <div class="radio-group">
+        <label><input type="radio" name="payment" value="monthly"> Monthly – Pay every month</label>
+        <label><input type="radio" name="payment" value="quarterly"> Quarterly – Pay every 3 months (5% Discount)</label>
+        <label><input type="radio" name="payment" value="semi-annual"> Semi-Annual – Pay every 6 months (10% Discount)</label>
+        <label><input type="radio" name="payment" value="annual"> Annual – Pay once a year (15% Discount + FREE Installation)</label>
+    </div>
+</div>
+
+
+		
+			<!-- Choose Your Plan Section -->
+<div class="form-container">
+    <h2>Choose Your Plan</h2>
+
+    <div class="plan-options">
+        <!-- Residential Plans -->
+        <div class="plan-category">
+            <h3>Residential Plans <br><span>(For home & personal use)</span></h3>
+            <label><input type="checkbox" name="plan" value="ZoroLite"> ZoroLite – 100 Mbps | ₱999/month | Perfect for browsing & social media</label>
+            <label><input type="checkbox" name="plan" value="ZoroStream"> ZoroStream – 500 Mbps | ₱1,799/month | Ideal for HD streaming & remote work</label>
+            <label><input type="checkbox" name="plan" value="ZoroPro"> ZoroPro – 1 Gbps | ₱2,999/month | Best for gaming & heavy users</label>
+        </div>
+
+        <!-- Wireless Internet -->
+        <div class="plan-category">
+            <h3>Wireless Internet <br><span>(For remote areas)</span></h3>
+            <label><input type="checkbox" name="plan" value="ZoroAir Lite"> ZoroAir Lite – 150 Mbps | ₱1,299/month | Reliable satellite-based internet</label>
+            <label><input type="checkbox" name="plan" value="ZoroAir Max"> ZoroAir Max – 300 Mbps | ₱2,499/month | Low-latency, AI-optimized connectivity</label>
+        </div>
+
+        <!-- Business Solutions -->
+        <div class="plan-category">
+            <h3>Business Solutions <br><span>(For enterprises & commercial use)</span></h3>
+            <label><input type="checkbox" name="plan" value="Enterprise Fiber"> Enterprise Fiber – Custom speeds up to 10 Gbps | Scalable solutions for businesses</label>
+            <label><input type="checkbox" name="plan" value="Secure Business Network"> Secure Business Network – AI-enhanced cybersecurity with VPN protection</label>
+            <label><input type="checkbox" name="plan" value="Cloud Connectivity"> Cloud Connectivity – High-speed access for remote teams and data centers</label>
+        </div>
+    </div>
+</div>
+
+	<!-- Add-ons & Upgrades Section -->
+<div class="form-container">
+    <h2>Add-ons & Upgrades</h2>
+
+    <div class="addons-options">
+        <label><input type="checkbox" name="addon" value="WiFi Mesh System"> WiFi Mesh System – Enhanced whole-home coverage (₱799/month)</label>
+        <label><input type="checkbox" name="addon" value="Game Optimizer Mode"> Game Optimizer Mode – Lower latency for gaming (₱499/month)</label>
+        <label><input type="checkbox" name="addon" value="Static IP Address"> Static IP Address – Essential for businesses (₱399/month)</label>
+    </div>
+</div>
+
+<!-- Exclusive Promos Section -->
+<div class="form-container">
+    <h2>🔥 Exclusive Promos (Limited Time Only!)</h2>
+
+    <div class="promos-options">
+        <label><input type="checkbox" name="promo" value="Free Installation" checked> FREE Installation – Available for all plans!</label>
+        <label><input type="checkbox" name="promo" value="Early Bird Reward" checked> Early Bird Reward – First 100 subscribers get 1 month FREE!</label>
+        <label><input type="checkbox" name="promo" value="Business Bundle Offer" checked> Business Bundle Offer – Get 3 months of VPN security FREE with Enterprise Fiber</label>
+    </div>
+</div>
+
+<!-- Preferred Installation Date -->
+<div class="form-container">
+    <h2>📌 Preferred Installation Date</h2>
+    <div class="form-group">
+        <label for="install-date">📆 Date:</label>
+        <input type="date" id="install-date" name="install-date" required>
+    </div>
+</div>
+
+<!-- Preferred Contact Method -->
+<div class="form-container">
+    <h2>🔹 Preferred Contact Method</h2>
+    <div class="contact-method">
+        <label><input type="checkbox" name="contact-method" value="Call"> Call</label>
+        <label><input type="checkbox" name="contact-method" value="Email"> Email</label>
+        <label><input type="checkbox" name="contact-method" value="SMS"> SMS</label>
+    </div>
+</div>
+
+<!-- Sign Up Now Section -->
+<div class="signup-container">
+    <h2>📝 Sign Up Now!</h2>
+    <p>📞 <strong>Call us today:</strong> (XXX) XXX-XXXX</p>
+    <p>💻 <strong>Apply online now:</strong> <a href="https://www.zoroarkfiber.com/apply" target="_blank">www.zoroarkfiber.com/apply</a></p>
+    <p>📍 <strong>Visit our branches nationwide</strong></p>
+    <p>✅ <strong>Submit this form</strong> and our team will contact you shortly to confirm your installation schedule!</p>
+    <p><strong>Switch to Zoroark – Experience Power Unmatched! 🚀</strong></p>
+</div>
+
+            <button type="submit" class="btn-submit">Submit</button>
+	
+
+        </form>
+    </div>
+	</div>
+
+
+</body>
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Left Side -->
+        <div class="footer-left">
+            <p>Experience Power Unmatched</p>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <!-- Right Side -->
+        <div class="footer-right">
+            <p>📞 <strong>Call Us Today:</strong> (02) 921-3387</p>
+            <p>🖥️ <strong>Email:</strong> support@zoroarkfiber.com</p>
+            <p>📍 <strong>Visit Our Offices:</strong> 1191 Pablo Ocampo Sr. Ext, Makati, Metro Manila</p>
+        </div>
+    </div>
+	
+	
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('wheel', function(event) {
+            if (event.ctrlKey) {
+                event.preventDefault(); // Stops zooming with Ctrl + Mouse Wheel
+            }
+        }, { passive: false });
+
+        //this mf iz for the plus and minus
+        document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey && (event.key === '=' || event.key === '-' || event.key === '0')) {
+            event.preventDefault(); 
+        }
+        });
+
+        //for mobile
+        document.addEventListener('touchmove', function(event) {
+        if (event.scale !== undefined && event.scale !== 1) {
+            event.preventDefault(); 
+        }
+        }, { passive: false });
+
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+        let now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+            event.preventDefault(); 
+        }
+        lastTouchEnd = now;
+        }, false);
+
+    </script>
+</html>

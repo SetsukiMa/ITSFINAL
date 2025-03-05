@@ -1,0 +1,145 @@
+/*navbarrrrrrr*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 15px 30px;
+    position: relative;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #f4a261;
+}
+
+/* Dropdown Styling */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 15px;
+    width: 260px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Button in Dropdown */
+.dropdown-content .btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #f4a261;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.dropdown-content .btn:hover {
+    background: #e76f51;
+}
+
+/* Fix Dropdown Overlap */
+.nav-links .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .dropdown-content {
+        left: 0;
+        transform: none;
+        width: 100%;
+    }
+
+    footer {
+        width: 100%;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0; /* Increased padding for more space */
+        margin-top: 20px; /* Adds space between the content and footer */
+    }
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    
+    .footer-section {
+        text-align: center;
+        margin: 10px;
+    }
+    
+    .footer-title {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    
+    .footer-divider {
+        width: 2px;
+        height: 50px;
+        background-color: white;
+    }
+}
+
+.top-image, .bottom-image {
+    width: 100%;
+    text-align: center;
+}
+
+.top-image img, .bottom-image img {
+    width: 100%; /* Or set a specific width */
+    display: block;
+}
+
+.content {
+    flex: 1; /* Allows the content to fill the remaining space */
+    padding: 20px;
+}

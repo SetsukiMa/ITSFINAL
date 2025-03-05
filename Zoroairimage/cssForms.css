@@ -1,0 +1,382 @@
+		/* ============================================
+		   GLOBAL STYLES - RESET & GENERAL SETTINGS
+		=============================================== */
+		
+		* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;/* Sets a default font */
+
+        }
+		/* Flex-wrap applied to multiple elements to ensure responsiveness */
+		.nav-links, .plan-options, .sub-navbar {
+			display: flex;
+			flex-wrap: wrap; /* Allows wrapping for better responsiveness */
+			justify-content: center;
+			gap: 15px;
+		}
+
+        /* ============================================
+		   NAVIGATION BAR (HEADER)
+		=============================================== */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            height: 80px;
+            background-color: rgba(153, 44, 37,1); /* Deep red for a strong contrast ZOROARK TYPE SHIT YES */
+        }
+		/* Logo inside navbar (I changed the logo btw to red fix later if panget)*/
+        .logo img {
+            width: 180px;
+            height: auto;
+        }
+		/* Navigation links */
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255,1); /*color white cause dark background change nalang if panget */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* ============================================
+		   SUB NAVIGATION BAR (SECONDARY NAV)
+		=============================================== */
+        .sub-navbar {
+            background: #22252A;
+            padding: 10px 30px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .sub-navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* ============================================
+			   HERO SECTION (TOP BANNER)
+			=============================================== */
+        .hero {
+            background: url('background.gif') center/cover no-repeat; /*GRABE HAHAHA 100MB YUNG GIF HELP*/
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+		.hero-text {
+			background: rgba(0, 0, 0, 0.6); /* Dark background for text cause i cant read it change if panget*/
+			padding: 10px 20px;
+			border-radius: 8px; /* making it rounder kinda para smooth edges modern tignan yes */
+			display: inline-block;
+			color: white;
+		}
+		/* Hero section title */
+        .hero h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+		/* Hero section paragraph */
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+        }
+
+        /* ============================================
+		   FORM CONTAINER
+		=============================================== */
+		.form-container {
+			max-width: 600px;
+			margin: 50px auto;
+			padding: 25px;
+			background: linear-gradient(145deg, #2e2f3a, #444654); /* Subtle gradient */
+			border-radius: 12px;
+			border: 1px solid rgba(255, 255, 255, 0.15); /* Soft border */
+			box-shadow: 
+				4px 4px 10px rgba(0, 0, 0, 0.3), /* Outer shadow */
+				inset 2px 2px 5px rgba(255, 255, 255, 0.05); /* Inner glow effect */
+			transition: all 0.3s ease-in-out;
+		}
+
+		/* Hover effect cause im addicted to hovers LEGIT */
+		.form-container:hover {
+			box-shadow: 
+				6px 6px 15px rgba(0, 0, 0, 0.4),
+				inset 3px 3px 8px rgba(255, 255, 255, 0.08);
+			transform: translateY(-2px); /* Slight lift */
+		}
+
+		/* Form Heading */
+		.form-container h2 {
+			text-align: center;
+			margin-bottom: 20px;
+			font-size: 24px;
+			font-weight: bold;
+			color: #ffffff;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Soft text shadow */
+		}
+		/* ============================================
+		   FORM FIELDS
+		=============================================== */
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+		/* label giver GODDAMN LABEL */
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+			color:white;
+        }
+		/* Input fields */
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+		/* Input field focus effect */
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #6B6B6B;
+            outline: none;
+        }
+		
+		/* flexbox for the rows yes yes  para automatically arranged kahit anong viewport size */
+        .form-row {
+            display: flex;
+            gap: 10px;
+        }
+		/* Makes input fields evenly spaced */
+        .form-row .form-group {
+            flex: 1;
+        }
+
+       /* ============================================
+		   RADIO BUTTON SELECTION (PAYMENT PLAN[i didnt follow the layout kulang tayo radiobutton mb])
+		=============================================== */
+		.radio-group {
+			display: flex;
+			flex-direction: column;
+			gap: 8px; /* Adds spacing between options */
+		}
+		/* Styling labels for radio buttons */
+		.radio-group label {
+			display: flex;
+			align-items: center;
+			gap: 8px; /* Space between button and text */
+			font-size: 14px;
+			color: white;
+			cursor: pointer;
+		}
+		/* PAANO MAG BOOTSTRAP HELP*/
+		/* Custom radio button style */ 
+		.radio-group input[type="radio"] {
+			width: 16px;
+			height: 16px;
+			accent-color: #ffcc00; /* Match your theme */
+			cursor: pointer;
+			margin: 0; /* Remove default margin */
+		}
+
+
+
+		/* ============================================
+		   SUBMIT BUTTON
+		=============================================== */
+        .btn-submit {
+            width: 100%;
+            padding: 10px;
+            background: #862E2D;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background: #4e4e4e;
+        }
+			/* ============================================
+			   PLAN OPTIONS SECTION - Display different plans
+			=============================================== */
+		
+		.plan-options {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+
+		.plan-category {
+			flex: 1;
+			min-width: 250px;
+			padding: 15px;
+			background: #f4f4f4;
+			border-radius: 8px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		}
+
+		.plan-category h3 {
+			font-size: 1.2em;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		/* Plan description text */
+		.plan-category span {
+			font-size: 0.9em;
+			color: #666; /* Lighter text for subtext */
+			font-weight: normal;
+		}	
+		/* Plan selection checkboxes */
+		.plan-category label {
+			display: block;
+			font-size: 1em;
+			margin: 8px 0;
+			cursor: pointer; /*  indicating clickability */
+		}
+
+		.plan-category input {
+			margin-right: 8px;
+		}
+			/* ============================================
+		   ADD-ONS & PROMOS - Extra features and deals
+		=============================================== */
+		.addons-options,
+		.promos-options {
+			display: flex;
+			flex-direction: column;  /* Stacks options vertically */
+			gap: 10px;
+		}
+
+		.addons-options label,
+		.promos-options label {
+			display: block;
+			font-size: 1em;
+			padding: 10px;
+			background: #f4f4f4;
+			border-radius: 8px; /*round border kinda */
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			cursor: pointer;
+		}
+
+		.addons-options input,
+		.promos-options input {
+			margin-right: 8px;
+			transform: scale(1.2);
+		}
+		
+		/* ============================================
+		   CONTACT METHOD SECTION - User communication preferences
+		=============================================== */
+		.contact-method {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		.contact-method label {
+			display: flex;
+			align-items: center;
+			font-size: 1em;
+			padding: 10px;
+			background: #f4f4f4;
+			border-radius: 8px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			cursor: pointer;
+		}
+
+		.contact-method input {
+			margin-right: 8px;
+			transform: scale(1.2);
+		}
+		/* ============================================
+			   PARALLAX BACKGROUND CONTAINER
+			=============================================== */
+		.parallax-container {
+			background: url('red.jpg') center/cover no-repeat fixed;
+			height: auto;
+			padding: 50px 0;
+			position: relative;
+		}	
+		/* ============================================
+		   SIGN-UP SECTION STYLING
+		=============================================== */
+		.signup-container p{
+			color: white;
+		}
+
+		.footer {
+			background-color: #222; /* Match nav color */
+			color: white;
+			padding: 20px;
+			font-size: 14px;
+			border: 2px solid black; /* Matches the boxed style */
+		}
+
+		.footer-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			max-width: 900px; /* Adjust width as needed */
+			margin: auto;
+			padding: 20px 0;
+		}
+
+		.footer-left {
+			width: 40%;
+			text-align: center;
+			font-weight: bold;
+			font-size: 18px;
+		}
+
+		.footer-right {
+			width: 55%;
+			font-size: 14px;
+		}
+
+		.footer-right p {
+			margin: 5px 0;
+		}
+
+		.footer-right i {
+			margin-right: 8px;
+		}
+
+		.footer-divider {
+			width: 2px;
+			background-color: white;
+			height: 80px;
+			margin: 0 20px;
+		}
+
+
+
+/* ============================================
+		
+
+				FOR ZOROAIR 
+
+		=============================================== */
+		
+		
+
+		

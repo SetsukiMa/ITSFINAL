@@ -1,0 +1,301 @@
+   
+   
+   
+   * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+
+    body {
+        overflow-x: hidden;
+        font-family: var(--bs-body-font-family) !important;
+    }
+
+       /*navbarrrrrrr*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 15px 30px;
+    position: relative;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #f4a261;
+}
+
+/* Dropdown Styling */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 15px;
+    width: 260px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Button in Dropdown */
+.dropdown-content .btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #f4a261;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.dropdown-content .btn:hover {
+    background: #e76f51;
+}
+
+/* Fix Dropdown Overlap */
+.nav-links .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .dropdown-content {
+        left: 0;
+        transform: none;
+        width: 100%;
+    }
+}
+
+    /* Hero Section */
+    .hero {
+        background: url('angaswallpaper.webp') center/cover fixed;
+        height: 300px;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+
+    /*INNER DIV OF THE BANNER*/
+    .inner {
+        position: absolute;
+        background-color: rgba(34, 37, 42, 0.8); 
+        border-radius: 15px;
+        width: 70%;
+        padding: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 200px;
+    }
+
+    /*THESE HEADERS ARE FOR THE INNER DIV*/
+    h2 {
+        padding-top: 0px;
+    }
+    h3 {
+        font-weight: normal;
+        font-size: 22px;
+        padding: 3px;
+    }
+    h4 {
+        font-weight: normal;
+        font-size: 18px;
+        padding: 5px 90px;
+    }
+
+    /*DIFFERENT PARALLAX EFFECTS*/
+
+    .columnParallaxLeft {
+        flex: 1;
+        
+    
+        min-height: 700px;
+        background-attachment: fixed;
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+
+    }
+
+    .columnParallaxRight {
+        flex: 1;
+        min-height: 700px;
+        background-attachment: fixed;
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+
+    }
+
+    #parallaxBody {
+        background-image: url("angaswallpaper.webp");
+        min-height: 400px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* ROW AND COLUMN EFFECTS*/
+
+    .column {
+        flex: 5;
+    
+        color: #FDF7F4;
+        }
+
+    .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+    .career {
+        flex: 1;
+        background-color:  rgba(34, 37, 42, 0.8);
+        color: #FDF7F4;
+        margin: 10px;
+        border-radius: 5px;
+        height: 570px;
+       
+    }
+
+    /*CAREER DIVS*/
+
+    .career p {
+        margin: 15px;
+        text-align: center;
+    }
+
+    .career b {
+        font-size: 19px;
+    }
+
+
+    /*modal stuff*/
+
+    /*MODAL SOCIALS DROP DOWN*/
+    .bar1, .bar2, .bar3 {
+        width: 5px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+
+      .dropbtn-social {
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+      }
+      
+      .dropdown-social {
+        position: relative;
+      }
+      
+      .dropdown-content-social {
+        display: none;
+        position: absolute;
+        background-color: rgba(34, 37, 42);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content-social a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+    .dropdown-content-social a:hover {
+        background-color: #ddd;
+        color: rgba(34, 37, 42);
+    }
+
+    .dropdown-social:hover .dropdown-content-social {
+        display: block;
+    }
+
+    /*MODAL FOR IMAGES*/
+
+    .modal-content-image img {
+            width: 100%; 
+            height:500px; 
+            object-fit: cover; 
+            display: block;
+            filter: grayscale(100%) sepia(100%) saturate(300%) hue-rotate(-50deg);
+    }
+
+    /*SECTION FOOTER*/
+.footer-divider {
+    width: 0.10%; /* Adjust width */
+    height: 100px; /* Thickness */
+    background-color: white; /* Color */
+    margin: 10px auto; /* Centering */
+}
+
+.developer {
+    width: 100%;
+    height: 50px;
+    background-color:#333 ;
+    padding: 13px;
+}
+
+.developer p {
+    text-align: center;
+    color: #ddd;
+    font-size: large;
+    
+}

@@ -1,0 +1,386 @@
+
+
+/* ============================================
+		   GLOBAL STYLES - RESET & GENERAL SETTINGS
+		=============================================== */
+		
+		*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+			font-family: var(--bs-body-font-family);
+
+        }
+		
+		/*navbar*/
+		.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 15px 30px;
+    position: relative;
+}
+.main-content {
+    flex: 1;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #f4a261;
+}
+
+/* Dropdown Styling */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 15px;
+    width: 260px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Button in Dropdown */
+.dropdown-content .btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #f4a261;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.dropdown-content .btn:hover {
+    background: #e76f51;
+}
+
+/* Fix Dropdown Overlap */
+.nav-links .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .dropdown-content {
+        left: 0;
+        transform: none;
+        width: 100%;
+    }
+}
+
+
+        /* ============================================
+			   HERO SECTION (TOP BANNER)
+			=============================================== */
+        .hero {
+            background: url('header gif.gif') center/cover no-repeat;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+		.hero-text {
+			padding: 10px 20px;
+			border-radius: 8px;
+			display: inline-block;
+			color: black;
+			-webkit-text-fill-color: white;
+			-webkit-text-stroke: 1px;
+		}
+		/* Hero section title */
+        .hero h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+			font-weight: 900;
+        }
+		/* Hero section paragraph */
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+			font-weight: 900;
+        }
+		
+		/* ============================================
+			   PARALLAX BACKGROUND
+			=============================================== */
+		.parallax {
+			background: url('parallax.jpg') center/cover no-repeat fixed;
+			height: auto;
+			padding: 50px 0;
+			position: relative;
+		}	
+		/*============================================
+			         MENU CONTAINER 
+		  ============================================*/
+		.container.menu {
+			max-width: 650px;
+			margin: 30px auto;
+			padding: 5px;
+			background: linear-gradient(145deg, #2e2f3a, #444654);
+			border-radius: 12px;
+			border: 1px solid rgba(255, 255, 255, 0.15);
+			box-shadow: 
+				4px 4px 10px rgba(0, 0, 0, 0.3),
+				inset 2px 2px 5px rgba(255, 255, 255, 0.05);
+			transition: all 0.3s ease-in-out;
+		}
+		
+		.container:last-child {
+			margin-bottom: 0;
+		}
+		/*==================================================
+			MENU OF FAQ OR CONTACT US
+		  ==================================================*/
+		
+		.menu {
+			display: flex;
+			gap: 100px;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			margin: 20px auto;
+			text-align: center;
+		}
+
+		.tab {
+			text-decoration: none;
+			color: white;
+			font-size: 25px;
+			font-weight: bold;
+			transition: 0.7s;
+		}
+		
+		
+		.tab.current:hover, 
+		.tab:hover{
+			color: #862E2D;
+		}
+
+		.tab.current {
+			color: #DBD9D6;
+			text-decoration: underline;
+		}
+		
+		/*============================================
+			         FAQs 
+		  ============================================*/
+		.container{
+			width: 90%;
+			max-width: 1000px;
+			margin: 30px auto;
+			padding: 5px;
+			background: linear-gradient(145deg, #2e2f3a, #444654);
+			border-radius: 12px;
+			border: 1px solid rgba(255, 255, 255, 0.15);
+			box-shadow: 
+				4px 4px 10px rgba(0, 0, 0, 0.3),
+				inset 2px 2px 5px rgba(255, 255, 255, 0.05);
+			transition: all 0.3s ease-in-out;
+		}
+		  
+		h2{
+			text-align:center;
+		}
+		/*============================================
+			         FAQ CONTAINER 
+		  ============================================*/
+		.wrapper {
+			max-width: 75%;
+			margin: auto;
+		}
+
+		.wrapper > p,
+		.wrapper > h1 {
+			margin: 1.5rem 0;
+			text-align: center;
+		}
+
+		.wrapper > h1 {
+			letter-spacing: 3px;
+		}
+
+		.accordion {
+			background: linear-gradient(145deg, #2e2f3a, #444654);
+			color: white;
+			cursor: pointer;
+			font-size: 1.2rem;
+			width: 100%;
+			padding: 2rem 2.5rem;
+			border: none;
+			outline: none;
+			transition: 0.8s;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-weight: bold;
+		}
+
+		.accordion i {
+			font-size: 1.6rem;
+		}
+
+		.active,
+		.accordion:hover {
+			
+			background: #a43a3a; /* Slightly lighter red */
+			transform: scale(1.05);
+		}
+
+		.panel {
+			padding: 2rem 2rem 2.5rem 2rem;
+			background: linear-gradient(145deg, #2e2f3a, #444654);
+			overflow: hidden;
+			display: none;
+		}
+		.panel p {
+			color: white;
+			font-size: 1.2rem;
+			line-height: 1.4;
+		}
+
+		.faq {
+			border: 1px solid rgba(0, 0, 0, 0.2);
+			margin: 10px 0;
+		}
+		.faq.active {
+			border: none;
+		}
+		
+		/* ============================================
+			   CONTACT US
+		=============================================== */
+		/*for top text*/
+		.issue{
+			color: white;
+			font-size: 1.2rem;
+			line-height: 1.4;
+			padding: 2rem;
+		}
+		
+		.form-group {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 30px;
+			padding: 0px 9px 8px 9px;
+			margin-bottom:10px;
+		}
+
+		.input-box {
+			flex:1;
+			display: flex;
+			flex-direction: column;
+		}
+
+		label {
+			font-weight: bold;
+			margin-bottom: 5px;
+			font-size: 14px;
+			color: white;
+		}
+
+		input, select {
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			font-size: 16px;
+			transition: border 0.3s ease-in-out;
+			background-color:#3D3F4B;
+			border-color: #ABA7A5;
+			border-width: 3px;
+			color: white;
+		}
+
+		input:focus, select:focus {
+			border-color: #862E2D;
+			outline: none;
+		}
+		
+		input{
+			max-width:970px;
+		}
+		
+		select {
+			appearance: none; /*removed arrow because its ugly*/
+			padding-right: 30px;
+			cursor: pointer;
+			width: 100%;
+			max-width: 970px;
+		}
+		
+		.contact-buttons {
+			display: flex;
+			justify-content: center;
+		}
+		
+		.contact-buttons button {
+			padding: 12px 20px;
+			width: 60%;
+			margin-top: 12px;
+			margin-bottom:12px;
+			font-size: 16px;
+			font-weight: bold;
+			color: white;
+			background-color: #862E2D; /* Main button color */
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+			transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+			
+		}
+		
+		.contact-buttons button:hover {
+			background-color: #a43a3a; /* Slightly lighter red */
+			transform: scale(1.05);
+		}
+
+		
+
+		

@@ -1,0 +1,30 @@
+.header {
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 2px solid #444;
+}
+
+.header-bottom {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #222;
+}
+
+.nav-top a, .nav-bottom a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.nav-top a:hover, .nav-bottom a:hover {
+    text-decoration: underline;
+}

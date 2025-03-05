@@ -1,0 +1,46 @@
+/*SECTION FOOTER*/
+.footer {
+    background-color: #222; /* Match nav color */
+    color: white;
+    padding: 20px;
+    font-size: 14px;
+    position:absolute;
+    border: 2px solid black; /* Matches the boxed style */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px; /* Adjust width as needed */
+    margin: auto;
+    padding: 20px 0;
+}
+
+.footer-left {
+    width: 40%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer-right {
+    width: 55%;
+    font-size: 14px;
+}
+
+.footer-right p {
+    margin: 5px 0;
+}
+
+.footer-right i {
+    margin-right: 8px;
+}
+
+.footer-divider {
+    width: 2px;
+    background-color: white;
+    height: 80px;
+    margin: 0 20px;
+}
+

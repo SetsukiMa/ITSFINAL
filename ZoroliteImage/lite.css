@@ -1,0 +1,86 @@
+/*=====================================PLANS=======================================*/
+
+
+.plan-options {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+.plan-category {
+    flex: 1;
+    min-width: 250px;
+    padding: 15px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.plan-category h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+/* Plan description text */
+.plan-category span {
+    font-size: 0.9em;
+    color: #666; /* Lighter text for subtext */
+    font-weight: normal;
+}	
+/* Plan selection checkboxes */
+.plan-category label {
+    display: block;
+    font-size: 1em;
+    margin: 8px 0;
+    cursor: pointer; /*  indicating clickability */
+}
+
+.plan-category input {
+    margin-right: 8px;
+}
+
+/*========================================================TABLES==================================*/
+.tableContainer{
+    background:  url('red.jpg'); /* Keeps text readable */
+      padding: 40px 20px; /* Increases space inside the text box */
+      border-radius: 10px;
+      /*flex box*/
+      display: flex;
+      justify-content: center; /* Horizontally center */
+      align-items: center; 
+      flex-direction: column; 
+      
+  }
+.tableContainer h1{
+    font-size: 2.5rem;
+      font-weight: 700;
+      text-transform: uppercase; /* Make all letters uppercase */
+      letter-spacing: 2px; /* Space out letters */
+      text-align: center;
+      color: white;
+      border-bottom: 3px solid white; /* Add an underline */
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+  }
+
+#tableInfo th, #tableInfo td {
+  padding: 15px; /* Increase padding inside each cell */
+}
+
+/*====================================================HERO SECTION======================================== */
+.ZoroAirhero {
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+/* Make the hero image fully responsive */
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
